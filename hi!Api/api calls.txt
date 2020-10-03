@@ -1,0 +1,60 @@
+POST => http://localhost:3000/api/visit
+send
+{
+    "name": "pippo",
+    "surname": "bello",
+    "compID": 1,
+    "refID": 11
+}
+
+recive
+{
+    "info": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 0,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    },
+    "id": "pippo_25"
+}
+
+GET => http://localhost:3000/api/companies
+[
+    {
+        "id": 1,
+        "name": "vCloud",
+        "tema": "{test: 1}"
+    }
+]
+
+GET => http://localhost:3000/api/reference/{id}
+[
+    {
+        "id": 11,
+        "name": "qqq",
+        "surname": "www",
+        "id_company": 1
+    },
+    .
+    .
+    .
+]
+
+POST => http://localhost:3000/api/exit/{id}         {id} = ID che inserisce da ospite
+{
+    "info": {
+        "fieldCount": 0,
+        "affectedRows": 0,
+        "insertId": 0,
+        "serverStatus": 34,
+        "warningCount": 0,
+        "message": "(Rows matched: 0  Changed: 0  Warnings: 0",
+        "protocol41": true,
+        "changedRows": 0
+    },
+    "message": "ID isn't correct"
+}
