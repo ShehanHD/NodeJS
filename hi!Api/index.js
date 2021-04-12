@@ -40,6 +40,7 @@ app.use((error, req, res, next) => {
         error: error.message
     })
 })
+
 app.listen(PORT, () => {
     console.log('Server listen to: http://localhost:' + PORT)
 })
